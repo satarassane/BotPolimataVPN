@@ -1,4 +1,4 @@
-name: JavaGoat-WhatsApp-Bot
+name: Polimata BOT
 
 on:
   workflow_dispatch:
@@ -15,12 +15,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24.11.1'
 
       - name: Install Dependencies
         run: npm install
 
       - name: Start AI Bot
-        env:
-          FIREBASE_URL: ${{ secrets.FIREBASE_URL }}
+      
         run: npm start
